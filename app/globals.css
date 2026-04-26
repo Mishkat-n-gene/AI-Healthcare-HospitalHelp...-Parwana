@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  --color-primary: #0f4c75;
+  --color-secondary: #1b8a8f;
+  --color-accent: #f4a261;
+  --color-danger: #e63946;
+  --color-success: #2dc653;
+  --color-warning: #ffb703;
+  --color-bg-dark: #0a1628;
+  --color-bg-card: #111f38;
+  --color-bg-sidebar: #0d1e35;
+  --color-text: #f0f4f8;
+  --color-text-muted: #8899aa;
+  --color-border: #1e3a5f;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-bg-dark);
+  color: var(--color-text);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-secondary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-bg-dark)];
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
